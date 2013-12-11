@@ -1,57 +1,43 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Happy Holidays!
+tagline: 
 ---
 {% include JB/setup %}
+<img src="http://i.imgur.com/XlKXjhI.jpg" alt=" " />
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+<div class="post">
+	<h2>Recent posts</h2>
+	<ul>
+	  {% for post in site.posts %}
+	    {% unless post.next %}
+	      <h3>{{ post.date | date: '%Y %b' }}</h3>
+	    {% else %}
+	      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+	      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+	      {% if year != nyear %}
+	        <h3>{{ post.date | date: '%Y %b' }}</h3>
+	      {% endif %}
+	    {% endunless %}
+ 
+	    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
+</div>
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
-
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-{% highlight yaml %}
-title : My Blog =)
-
-author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-{% endhighlight %}
-
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
-{% highlight html %}
-<link rel="stylesheet" href="http://david-myers.com/">
-<small>Hello World!</small>
-{% endhighlight %}
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
+<!--
 <ul class="posts">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+-->
+## About the Author
 
-## To-Do
+**Hi!** My name is David Myers, I am a digital media designer/developer. Currently I am working at Drexel University's School of Biomedical Engineering.
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/dbtek/jekyll-bootstrap-3)!
+## About this site
+
+This site is made to keep track of projects I am working on, save resources, links, and documentation linkable/shareable with co-workers, friends, or the casual google-surfer. The theme is [jekyll bootstrap](http://github.com/plusjade/jekyll-bootstrap) and it is hosted with [github pages](http://pages.github.com/)
 
 
