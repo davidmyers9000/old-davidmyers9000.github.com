@@ -10,7 +10,9 @@ tags: [Middleman, ImageMagick]
 _Disclaimer To complete this tutorial requires a basic knowledge of the **command line** plus **git** as well as **ruby gems**._
 
 ## Step 1 - Get [Photobox](http://dropthebit.com/demos/photobox/)
-`git clone https://github.com/yairEO/photobox.git`
+{% highlight yaml %}
+git clone https://github.com/yairEO/photobox.git
+{% endhighlight %}
 
 ## Step 2 - Get [ImageMagick](http://imagemagick.org/script/index.php)
 You may install ImageMagick any way you prefer. I am using boxen so I used the boxen puppet module to install imagemagick. [https://github.com/boxen/puppet-imagemagick](https://github.com/boxen/puppet-imagemagick)
