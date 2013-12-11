@@ -2,7 +2,7 @@
 layout: post
 title: "TFoS - Chapter 2"
 description: ""
-category: 
+category: notes
 tags: [notes]
 ---
 {% include JB/setup %}
