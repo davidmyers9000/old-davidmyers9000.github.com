@@ -9,6 +9,8 @@ tags: [october]
 
 ### Inspiration
 
+- [Westphal "Begin"](http://vimeo.com/61028050)
+
 - [Official Drexel Lebow Commercial](http://www.youtube.com/watch?feature=player_detailpage&v=0tu4qfhi5ps)
 
 - [Drexel Lebow](http://www.youtube.com/watch?feature=player_detailpage&v=mPr3MG5TVkk)
