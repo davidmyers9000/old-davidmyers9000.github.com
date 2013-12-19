@@ -1,4 +1,4 @@
-<! -- sidebar.html -->
+<!-- sidebar.html -->
 <header class="sidebar-header" role="banner">
 	<a href="{% if BASE_PATH %}{{ BASE_PATH }}{% else %}/{% endif %}">
 		<img src="http://www.gravatar.com/avatar/{{site.author.email_md5}}?s=150" class="img-circle" />
@@ -23,10 +23,10 @@
 			</a>
 		</li>
 		{% endif %}
-		{% if site.author.twitter %}
+		{% if site.author.vimeo %}
 		<li>
-			<a class="btn btn-default btn-sm" href="https://twitter.com/{{ site.author.twitter }}">
-				<i class="fa fa-twitter fa-lg"></i>
+			<a class="btn btn-default btn-sm" href="https://vimeo.com/{{ site.author.vimeo }}">
+				<i class="fa fa-vimeo-square fa-lg"></i>
 			</a>
 		</li>
 		{% endif %}
@@ -39,6 +39,13 @@
 		{% endif %}
 	</ul>
 	<ul id="contact-list-secondary" class="list-unstyled list-inline">
+		{% if site.author.twitter %}
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitter.com/{{ site.author.twitter }}">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		{% endif %}
 		{% if site.author.pinterest %}
 		<li>
 			<a class="btn btn-default btn-sm" href="https://pinterest.com/{{ site.author.pinterest }}">
@@ -53,12 +60,12 @@
 			</a>
 		</li>
 		{% endif %}
-		<li>
+		<!--li>
 			<a class="btn btn-default btn-sm" href="{{ BASE_PATH }}{{ site.JB.rss_path }}">
 				<i class="fa fa-rss fa-lg"></i>
 			</a>
-		</li>
+		</li-->
 	</ul>
 </div>
 
-<! -- sidebar.html end -->
+<!-- sidebar.html end -->
