@@ -4,27 +4,42 @@ title: Happy Holidays!
 tagline: 
 ---
 {% include JB/setup %}
-<img src="http://i.imgur.com/XlKXjhI.jpg" alt=" " />
-
-<div class="post">
-	<h2>Recent posts</h2>
-	<ul>
-	  {% for post in site.posts %}
-	    {% unless post.next %}
-	      <h3>{{ post.date | date: '%Y %b' }}</h3>
-	    {% else %}
-	      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
-	      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
-	      {% if year != nyear %}
-	        <h3>{{ post.date | date: '%Y %b' }}</h3>
-	      {% endif %}
-	    {% endunless %}
- 
-	    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+<script>
+var settings = { username: 'davidmyers9000', 
+                 target: '#reading',
+                 separator: ' '
+               };
+               
+get_delicious_json( 'wishlist', settings);
+</script>
+<div class="row">
+	<div class="col-md-4 post">
+		<h2>Recent posts</h2>
+		<ul>
+		  {% for post in site.posts %}
+		    {% unless post.next %}
+		      <h3>{{ post.date | date: '%Y %b' }}</h3>
+		    {% else %}
+		      {% capture year %}{{ post.date | date: '%Y %b' }}{% endcapture %}
+		      {% capture nyear %}{{ post.next.date | date: '%Y %b' }}{% endcapture %}
+		      {% if year != nyear %}
+		        <h3>{{ post.date | date: '%Y %b' }}</h3>
+		      {% endif %}
+		    {% endunless %}
+		    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		  {% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-4">
+		<h2>Delicious</h2>
+		<div id="reading">
+			<ul></ul>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<h2>Something Else</h2>
+	</div>
 </div>
-
 <!--
 <ul class="posts">
   {% for post in site.posts %}
@@ -32,12 +47,16 @@ tagline:
   {% endfor %}
 </ul>
 -->
-## About the Author
+<div class="row">
+<div class="col-md-12">
+<h2>About the Author</h2>
 
-**Hi!** My name is David Myers, I am a digital media designer/developer. Currently I am working at Drexel University's School of Biomedical Engineering.
+<strong>Hi!</strong> My name is David Myers, I am a digital media designer/developer. Currently I am working at Drexel University's School of Biomedical Engineering.
 
-## About this site
+<h2>About this site</h2>
 
 This site is made to keep track of projects I am working on, save resources, links, and documentation linkable/shareable with co-workers, friends, or the casual google-surfer. The theme is [jekyll bootstrap](http://github.com/plusjade/jekyll-bootstrap) and it is hosted with [github pages](http://pages.github.com/)
 
+</div>
+</div>
 
