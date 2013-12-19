@@ -5,17 +5,20 @@ permalink: /:categories/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 
+
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Blog of David Myers
+title : Codeboxer
 tagline : 
 author :
   name : David Myers
   email : davidmyers9000@gmail.com
   github : davidmyers9000
   twitter : _Dmyers
-  feedburner : 
+  linkedin : dmyers2
+  vimeo : davidmyers
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
