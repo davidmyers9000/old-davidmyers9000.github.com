@@ -68,6 +68,20 @@
           {% assign tags_list = nil %}
         </ul>
         {% endunless %}
+        
+        <div id="delicious">
+          <h2>Delicious Links</h2>
+          <p>Tags: <strong id="tags">
+          {% unless page.tags.empty? %}
+          {% assign tags_list = page.tags %}
+            {% for tag in tags_list %}
+              {{ tag }}
+            {% endfor %}
+          {% endunless %}
+          </strong></p>
+          <ul></ul>
+        </div>
+        
 
         <hr>
 
@@ -93,3 +107,8 @@
 	</div>
 </article>
 <div class="clearfix"></div>
+
+<script>
+  var tags = $("#tags").html();
+  get_delicious_json(tags, settings);
+</script>

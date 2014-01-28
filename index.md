@@ -4,14 +4,6 @@ title: Happy Holidays!
 tagline: 
 ---
 {% include JB/setup %}
-<script>
-var settings = { username: 'davidmyers9000', 
-                 target: '#reading',
-                 separator: ' '
-               };
-               
-get_delicious_json( 'wishlist', settings);
-</script>
 <div class="row">
 	<div class="col-md-4 post">
 		<h2>Recent posts</h2>
@@ -32,7 +24,8 @@ get_delicious_json( 'wishlist', settings);
 	</div>
 	<div class="col-md-4">
 		<h2>Delicious</h2>
-		<div id="reading">
+		<div id="delicious">
+			<p>Tags: <strong id="tags">drexel biomed</strong></p>
 			<ul></ul>
 		</div>
 	</div>
@@ -40,6 +33,10 @@ get_delicious_json( 'wishlist', settings);
 		<h2>Something Else</h2>
 	</div>
 </div>
+<script>
+	var tags = $("#tags").html();
+	get_delicious_json(tags, settings);
+</script>
 <!--
 <ul class="posts">
   {% for post in site.posts %}
