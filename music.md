@@ -1,9 +1,8 @@
 ---
-layout: post
-title: "music"
-description: ""
-category: 
-tags: []
+layout: page
+title: Music
+header: Music
+group: navigation
 ---
 {% include JB/setup %}
 
